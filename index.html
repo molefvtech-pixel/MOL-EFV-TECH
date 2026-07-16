@@ -46,20 +46,14 @@
     </div>
   </div>
 
-  <div class="sound-notice" id="soundNotice" hidden>
-    <div>
-      <i class="fa-solid fa-music"></i>
-      <span>Activa la música ambiental</span>
-    </div>
-    <button id="enableSound" type="button">Activar</button>
-  </div>
-
   <audio id="backgroundMusic" loop preload="auto">
     <source src="audio/musica.mp3" type="audio/mpeg">
   </audio>
 
-  <button class="music-toggle" id="musicToggle" type="button" aria-label="Activar o pausar música" title="Música ambiental">
-    <i class="fa-solid fa-volume-low"></i>
+  <button class="music-toggle" id="musicToggle" type="button"
+          aria-label="Activar música ambiental"
+          title="Activar o pausar música">
+    <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
   </button>
 
   <header id="inicio">
@@ -476,48 +470,27 @@
       </div>
     </section>
 
-    <section id="contacto">
+    <section id="contacto" class="contact">
+      <div class="section-header">
+        <span>10</span>
+        <h2>Contáctanos</h2>
+        <p>Cuéntanos qué problema tiene tu equipo.</p>
+      </div>
 
-<h2 class="section-title">
+      <div class="contact-layout">
+        <div class="contact-box">
+          <a class="contact-btn whatsapp"
+             href="https://wa.me/56974398565?text=Hola%20MOL%20EFV%20TECH.%20Quisiera%20consultar%20por%20un%20servicio%20t%C3%A9cnico."
+             target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span><strong>WhatsApp</strong><small>+56 9 7439 8565</small></span>
+          </a>
 
-Contáctanos
-<p>Cuéntanos qué problema tiene tu equipo.</p>
-</h2>
-
-<div class="contact-box">
-
-<a href="https://wa.me/56974398565"
-class="contact-btn whatsapp"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-WhatsApp
-
-</a>
-
-<a href="https://www.instagram.com/molefvtech/"
-class="contact-btn instagram"
-target="_blank">
-
-<i class="fab fa-instagram"></i>
-
-Instagram
-
-</a>
-
-<a href="mailto:molefvtech@gmail.com"
-class="contact-btn email">
-
-<i class="fas fa-envelope"></i>
-
-Correo
-
-</a>
-
-</div>
-
-</section>
+          <a class="contact-btn email" href="mailto:molefvtech@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            <span><strong>Correo</strong><small>molefvtech@gmail.com</small></span>
+          </a>
+        </div>
 
         <form id="contactForm" class="contact-form">
           <label>
