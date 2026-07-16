@@ -972,3 +972,112 @@ footer {
   outline: 3px solid var(--cyan);
   outline-offset: 4px;
 }
+
+/* Imagen de los sistemas operativos */
+
+.systems-image {
+    width: min(100%, 950px);
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.systems-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 540px;
+    object-fit: contain;
+}
+
+
+/* Galería de tecnología */
+
+.gallery {
+    width: min(100%, 1150px);
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.gallery-item,
+.gallery-item.gallery-wide {
+    width: 100%;
+    height: 280px;
+    min-height: 0;
+
+    grid-column: auto;
+    grid-row: auto;
+
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Las imágenes de sistemas y del logo no se recortan */
+
+.gallery-item:nth-child(2) img,
+.gallery-item:nth-child(3) img {
+    object-fit: contain;
+    padding: 10px;
+    background: #020617;
+}
+
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    .systems-image {
+        max-width: 720px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-item,
+    .gallery-item.gallery-wide {
+        height: 250px;
+    }
+
+}
+
+
+/* Celulares */
+
+@media (max-width: 640px) {
+
+    .systems-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .systems-image img {
+        max-height: 320px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .gallery-item,
+    .gallery-item.gallery-wide {
+        height: 220px;
+    }
+
+}
