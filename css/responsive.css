@@ -1,0 +1,222 @@
+/* MOL EFV TECH - RESPONSIVE.CSS */
+@media (max-width: 1180px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: .82rem;
+  }
+
+  .diagnostic-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: grid;
+    place-items: center;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 78px);
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(2,6,23,.98);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: .35s ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 14px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: .95rem;
+  }
+
+  .nav-links a:hover {
+    background: rgba(34,211,238,.08);
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .hero {
+    min-height: 900px;
+    background-position: 62% center;
+  }
+
+  .hero-content {
+    max-width: 620px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-content,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-card {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-card > i {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-wide {
+    grid-row: auto;
+  }
+
+  .gallery-item {
+    min-height: 340px;
+  }
+
+  .diagnostic-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 72px 20px;
+  }
+
+  .navbar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo span {
+    font-size: .82rem;
+  }
+
+  .nav-links {
+    top: 70px;
+    max-height: calc(100vh - 70px);
+  }
+
+  .hero {
+    min-height: 860px;
+    padding: 120px 20px 70px;
+    align-items: flex-end;
+    background-position: 67% center;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(2,6,23,.18), rgba(2,6,23,.93) 60%);
+  }
+
+  .hero-content {
+    position: relative;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 15vw, 4rem);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-badges {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .loading-text {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mascot-glow {
+    width: 260px;
+    height: 260px;
+  }
+
+  .floating-mascot {
+    width: min(100%, 420px);
+  }
+
+  .gallery-item {
+    min-height: 250px;
+  }
+
+  .contact-form,
+  .diagnostic-form {
+    padding: 22px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .whatsapp-float,
+  .btn-top,
+  .music-toggle {
+    right: 16px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float { bottom: 16px; }
+  .btn-top { bottom: 76px; }
+  .music-toggle { bottom: 136px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

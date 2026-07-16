@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050816">
+
+  <title>MOL EFV TECH | Servicio Técnico de Notebooks y Computadores</title>
+  <meta name="description" content="Servicio técnico de notebooks y computadores en Chile. Mantenimiento, cambio de SSD, ampliación de RAM, instalación de Windows y Linux, optimización y soporte técnico.">
+  <meta name="keywords" content="servicio técnico notebook, reparación notebook, cambio SSD, memoria RAM, Windows, Linux, mantenimiento notebook, MOL EFV TECH">
+  <meta name="author" content="MOL EFV TECH">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="MOL EFV TECH">
+  <meta property="og:description" content="Legado que inspira. Precisión que da confianza.">
+  <meta property="og:image" content="img/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-content">
+      <img src="img/logo.png" alt="">
+      <h1>MOL EFV TECH</h1>
+      <p>Inicializando sistema...</p>
+      <div class="loading-bar"><span></span></div>
+      <div class="loading-text">
+        <span><i class="fa-solid fa-check"></i> Hardware</span>
+        <span><i class="fa-solid fa-check"></i> Software</span>
+        <span><i class="fa-solid fa-check"></i> Diagnóstico</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sound-notice" id="soundNotice" hidden>
+    <div>
+      <i class="fa-solid fa-music"></i>
+      <span>Activa la música ambiental</span>
+    </div>
+    <button id="enableSound" type="button">Activar</button>
+  </div>
+
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="audio/musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Activar o pausar música" title="Música ambiental">
+    <i class="fa-solid fa-volume-low"></i>
+  </button>
+
+  <header id="inicio">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="logo" href="#inicio" aria-label="Ir al inicio">
+        <img src="img/logo.png" alt="Logo MOL EFV TECH">
+        <span>MOL EFV TECH</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sistemas">Sistemas</a></li>
+        <li><a href="#mascota">Mascota</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#diagnostico">Diagnóstico</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menuToggle" type="button"
+        aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="tag"><i class="fa-solid fa-microchip"></i> Servicio técnico profesional</span>
+        <h1>MOL EFV TECH</h1>
+        <h2>Legado que inspira.<br>Precisión que da confianza.</h2>
+
+        <p>
+          Mantenimiento, reparación y optimización de notebooks y computadores,
+          con atención honesta, clara y personalizada.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#diagnostico">
+            <i class="fa-solid fa-stethoscope"></i> Diagnóstico inteligente
+          </a>
+
+          <a class="btn btn-whatsapp"
+             href="https://wa.me/56974398565?text=Hola%20MOL%20EFV%20TECH.%20Quisiera%20consultar%20por%20un%20servicio%20t%C3%A9cnico."
+             target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-badges">
+          <span><i class="fa-solid fa-laptop"></i> Notebooks</span>
+          <span><i class="fa-solid fa-desktop"></i> Computadores</span>
+          <span><i class="fa-brands fa-windows"></i> Windows</span>
+          <span><i class="fa-brands fa-linux"></i> Linux</span>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main id="contenido-principal">
+
+    <section class="stats" aria-label="Indicadores de servicio">
+      <article>
+        <strong class="counter" data-target="100">0</strong><span>%</span>
+        <p>Compromiso con cada equipo</p>
+      </article>
+      <article>
+        <strong class="counter" data-target="4">0</strong>
+        <p>Sistemas compatibles</p>
+      </article>
+      <article>
+        <strong class="counter" data-target="9">0</strong>
+        <p>Servicios principales</p>
+      </article>
+      <article>
+        <strong class="counter" data-target="1">0</strong>
+        <p>Atención personalizada</p>
+      </article>
+    </section>
+
+    <section id="servicios">
+      <div class="section-header">
+        <span>01</span>
+        <h2>Nuestros servicios</h2>
+        <p>Soluciones para reparar, mantener y mejorar el rendimiento de tus equipos.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="icon"><i class="fa-solid fa-laptop-medical"></i></div>
+          <h3>Reparación</h3>
+          <p>Diagnóstico de fallas de hardware y software en notebooks y computadores.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon"><i class="fa-solid fa-hard-drive"></i></div>
+          <h3>Cambio de SSD</h3>
+          <p>Más velocidad de inicio, apertura de programas y respuesta general.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon"><i class="fa-solid fa-memory"></i></div>
+          <h3>Ampliación de RAM</h3>
+          <p>Evaluación de compatibilidad e instalación de memoria.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon"><i class="fa-solid fa-fan"></i></div>
+          <h3>Mantenimiento</h3>
+          <p>Limpieza interna, ventilación y cambio de pasta térmica.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon"><i class="fa-brands fa-windows"></i></div>
+          <h3>Windows</h3>
+          <p>Instalación, controladores, configuración y optimización.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon"><i class="fa-brands fa-linux"></i></div>
+          <h3>Linux</h3>
+          <p>Distribuciones adaptadas a equipos modernos o antiguos.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon"><i class="fa-solid fa-shield-virus"></i></div>
+          <h3>Seguridad</h3>
+          <p>Eliminación de amenazas y recomendaciones de protección.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon"><i class="fa-solid fa-database"></i></div>
+          <h3>Respaldo</h3>
+          <p>Copia y transferencia de archivos importantes.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>Optimización</h3>
+          <p>Ajustes para recuperar fluidez y mejorar el uso diario.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sistemas" class="systems-section">
+      <div class="section-header">
+        <span>02</span>
+        <h2>Cuatro sistemas, una solución</h2>
+        <p>Adaptamos el equipo a tus necesidades de estudio, trabajo o entretenimiento.</p>
+      </div>
+
+      <div class="systems-image">
+        <img src="img/sistemas.png" alt="Windows, MX Linux, Chromebook y macOS">
+      </div>
+
+      <div class="system-tags">
+        <span><i class="fa-brands fa-windows"></i> Windows</span>
+        <span><i class="fa-brands fa-linux"></i> Linux</span>
+        <span><i class="fa-brands fa-chrome"></i> ChromeOS</span>
+        <span><i class="fa-brands fa-apple"></i> macOS</span>
+      </div>
+    </section>
+
+    <section id="historia" class="about">
+      <div class="section-header">
+        <span>03</span>
+        <h2>Nuestra historia</h2>
+        <p>Tecnología, familia y compromiso detrás de cada servicio.</p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-text">
+          <h3>El propósito detrás de MOL EFV TECH</h3>
+          <p>
+            Inspirados por quienes nos dieron nuestras raíces y motivados por quienes
+            representan nuestro futuro, ofrecemos un servicio técnico honesto,
+            preciso y cercano.
+          </p>
+          <p>
+            Cada computador guarda proyectos, aprendizajes, trabajos y recuerdos.
+            Por eso cuidamos cada equipo como si fuera nuestro.
+          </p>
+        </div>
+
+        <article class="about-card">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+          <h3>Tecnología con propósito</h3>
+          <p>Recuperamos herramientas para estudiar, trabajar, crear y emprender.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="mascota" class="mascot-section">
+      <div class="section-header">
+        <span>04</span>
+        <h2>Nuestra mascota tecnológica</h2>
+        <p>Cercanía, dedicación y cuidado representados por el koala de MOL EFV TECH.</p>
+      </div>
+
+      <div class="mascot-stage">
+        <div class="mascot-glow"></div>
+        <video class="floating-mascot" autoplay muted loop playsinline preload="metadata">
+          <source src="img/mascota-koala.mp4" type="video/mp4">
+          Tu navegador no puede reproducir el video.
+        </video>
+      </div>
+    </section>
+
+    <section id="ventajas">
+      <div class="section-header">
+        <span>05</span>
+        <h2>¿Por qué elegirnos?</h2>
+        <p>Un servicio basado en transparencia, precisión y cuidado.</p>
+      </div>
+
+      <div class="advantages-grid">
+        <article class="advantage-card">
+          <i class="fa-solid fa-comments"></i>
+          <h3>Comunicación clara</h3>
+          <p>Explicamos el problema sin términos innecesariamente complejos.</p>
+        </article>
+
+        <article class="advantage-card">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>Diagnóstico responsable</h3>
+          <p>Revisamos antes de recomendar reparaciones o actualizaciones.</p>
+        </article>
+
+        <article class="advantage-card">
+          <i class="fa-solid fa-user-gear"></i>
+          <h3>Atención personalizada</h3>
+          <p>Consideramos el uso, las necesidades y el presupuesto.</p>
+        </article>
+
+        <article class="advantage-card">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>Trabajo cuidadoso</h3>
+          <p>Tratamos cada equipo con responsabilidad durante todo el proceso.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="resultados" class="results-section">
+      <div class="section-header">
+        <span>06</span>
+        <h2>Antes y después</h2>
+        <p>Ejemplos de mejoras que pueden transformar el funcionamiento de un equipo.</p>
+      </div>
+
+      <div class="before-after-grid">
+        <article class="comparison-card">
+          <div class="before">
+            <span>ANTES</span>
+            <h3>Notebook lento</h3>
+            <ul>
+              <li>Disco HDD</li>
+              <li>Inicio demorado</li>
+              <li>Poco espacio</li>
+            </ul>
+          </div>
+          <i class="fa-solid fa-arrow-right-long"></i>
+          <div class="after">
+            <span>DESPUÉS</span>
+            <h3>Equipo optimizado</h3>
+            <ul>
+              <li>SSD instalado</li>
+              <li>Inicio rápido</li>
+              <li>Sistema limpio</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="comparison-card">
+          <div class="before">
+            <span>ANTES</span>
+            <h3>Alta temperatura</h3>
+            <ul>
+              <li>Ventilación obstruida</li>
+              <li>Pasta térmica seca</li>
+              <li>Ruido excesivo</li>
+            </ul>
+          </div>
+          <i class="fa-solid fa-arrow-right-long"></i>
+          <div class="after">
+            <span>DESPUÉS</span>
+            <h3>Mantenimiento completo</h3>
+            <ul>
+              <li>Limpieza interna</li>
+              <li>Pasta renovada</li>
+              <li>Mejor refrigeración</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeria" class="portfolio">
+      <div class="section-header">
+        <span>07</span>
+        <h2>Tecnología y rendimiento</h2>
+        <p>Una muestra visual del estilo y las soluciones de MOL EFV TECH.</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="gallery-item gallery-wide">
+          <img src="img/gamer.png" alt="Notebook gamer con iluminación RGB" loading="lazy">
+          <figcaption class="overlay">Rendimiento y entretenimiento</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="img/sistemas.png" alt="Notebooks con distintos sistemas operativos" loading="lazy">
+          <figcaption class="overlay">Un sistema para cada necesidad</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="img/logo.png" alt="Logo MOL EFV TECH" loading="lazy">
+          <figcaption class="overlay">Legado, precisión y confianza</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="precios" class="prices-section">
+      <div class="section-header">
+        <span>08</span>
+        <h2>Valores orientativos</h2>
+        <p>El precio final depende del diagnóstico, modelo y repuestos necesarios.</p>
+      </div>
+
+      <div class="price-grid">
+        <article class="price-card">
+          <i class="fa-solid fa-broom"></i>
+          <h3>Mantenimiento</h3>
+          <strong>Consultar</strong>
+          <p>Limpieza interna y revisión térmica.</p>
+        </article>
+
+        <article class="price-card">
+          <i class="fa-solid fa-hard-drive"></i>
+          <h3>Instalación SSD</h3>
+          <strong>Consultar</strong>
+          <p>Mano de obra más respaldo opcional.</p>
+        </article>
+
+        <article class="price-card">
+          <i class="fa-brands fa-windows"></i>
+          <h3>Sistema operativo</h3>
+          <strong>Consultar</strong>
+          <p>Instalación y configuración inicial.</p>
+        </article>
+
+        <article class="price-card">
+          <i class="fa-solid fa-gauge-high"></i>
+          <h3>Optimización</h3>
+          <strong>Consultar</strong>
+          <p>Limpieza lógica y ajustes de rendimiento.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="diagnostico" class="diagnostic-section">
+      <div class="section-header">
+        <span>09</span>
+        <h2>Diagnóstico inteligente</h2>
+        <p>Responde unas preguntas y recibe una orientación preliminar.</p>
+      </div>
+
+      <form id="diagnosticForm" class="diagnostic-form">
+        <label>
+          ¿El equipo enciende?
+          <select name="enciende" required>
+            <option value="">Selecciona</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+            <option value="a-veces">A veces</option>
+          </select>
+        </label>
+
+        <label>
+          Problema principal
+          <select name="problema" required>
+            <option value="">Selecciona</option>
+            <option value="lento">Está lento</option>
+            <option value="temperatura">Se calienta</option>
+            <option value="pantalla">No da imagen</option>
+            <option value="sistema">Error de Windows o Linux</option>
+            <option value="virus">Virus o publicidad</option>
+            <option value="otro">Otro problema</option>
+          </select>
+        </label>
+
+        <label>
+          Tipo de equipo
+          <select name="equipo" required>
+            <option value="">Selecciona</option>
+            <option value="notebook">Notebook</option>
+            <option value="pc">Computador de escritorio</option>
+            <option value="aio">All-in-One</option>
+          </select>
+        </label>
+
+        <button class="btn btn-primary" type="submit">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Obtener orientación
+        </button>
+      </form>
+
+      <div class="diagnostic-result" id="diagnosticResult" hidden>
+        <h3>Orientación preliminar</h3>
+        <p id="diagnosticText"></p>
+        <a id="diagnosticWhatsApp" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Enviar resultado por WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="section-header">
+        <span>10</span>
+        <h2>Contáctanos</h2>
+        <p>Cuéntanos qué problema tiene tu equipo.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-box">
+          <a class="contact-btn whatsapp"
+             href="https://wa.me/56974398565?text=Hola%20MOL%20EFV%20TECH.%20Quisiera%20consultar%20por%20un%20servicio%20t%C3%A9cnico."
+             target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span><strong>WhatsApp</strong><small>+56 9 7439 8565</small></span>
+          </a>
+
+          <a class="contact-btn email" href="mailto:molefvtech@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            <span><strong>Correo</strong><small>molefvtech@gmail.com</small></span>
+          </a>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <label>
+            Nombre
+            <input type="text" name="nombre" required autocomplete="name">
+          </label>
+
+          <label>
+            Correo
+            <input type="email" name="correo" required autocomplete="email">
+          </label>
+
+          <label>
+            Equipo
+            <input type="text" name="equipo" placeholder="Ej.: Lenovo IdeaPad">
+          </label>
+
+          <label>
+            Problema
+            <textarea name="mensaje" rows="5" required placeholder="Describe el problema del equipo"></textarea>
+          </label>
+
+          <button class="btn btn-primary" type="submit">
+            <i class="fa-solid fa-paper-plane"></i> Preparar correo
+          </button>
+
+          <small>Al enviar, se abrirá tu aplicación de correo con el mensaje preparado.</small>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-logo">
+      <img src="img/logo.png" alt="">
+      <h2>MOL EFV TECH</h2>
+      <p>Legado que inspira. Precisión que da confianza.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Navegación secundaria">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#diagnostico">Diagnóstico</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <p class="copyright">
+      © <span id="currentYear">2026</span> MOL EFV TECH. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <a class="whatsapp-float"
+     href="https://wa.me/56974398565?text=Hola%20MOL%20EFV%20TECH.%20Necesito%20informaci%C3%B3n%20sobre%20un%20servicio."
+     target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button class="btn-top" id="btnTop" type="button" aria-label="Volver al inicio">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
