@@ -1182,3 +1182,34 @@ footer { padding-top:42px; padding-bottom:42px; }
   .service-grid-summary .service-card { min-height: auto; }
   #contacto { padding-top: 44px; padding-bottom: 44px; }
 }
+
+/* Contacto extra compacto */
+#contacto .contact-form {
+  padding: 20px 22px !important;
+}
+#contacto .form-group {
+  margin-bottom: 13px !important;
+}
+#contacto .form-group label {
+  display: block;
+  margin-bottom: 6px !important;
+  font-size: .94rem;
+}
+#contacto input,
+#contacto select {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 8px 14px !important;
+}
+#contacto textarea {
+  min-height: 82px !important;
+  height: 82px !important;
+  padding: 10px 14px !important;
+  resize: vertical;
+}
+#contacto .btn,
+#contacto button[type="submit"] {
+  min-height: 44px;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
