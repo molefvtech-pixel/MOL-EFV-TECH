@@ -220,3 +220,19 @@
     transition-duration: .01ms !important;
   }
 }
+
+@media (max-width: 900px) {
+  .hero { min-height:auto; padding-top:125px; padding-bottom:70px; }
+  .hero-layout { grid-template-columns:1fr; gap:32px; }
+  .hero-promo { justify-self:center; width:min(100%,430px); }
+}
+@media (max-width: 640px) {
+  section { padding-top:56px; padding-bottom:56px; }
+  .section-header { margin-bottom:28px; }
+  .hero { padding-top:110px; }
+  .hero-layout { gap:26px; }
+  .hero-promo { padding:10px; border-radius:22px; }
+  .hero-promo img { border-radius:16px; }
+  .hero-promo span { font-size:.82rem; }
+  .service-card, .advantage-card, .price-card { padding:22px; }
+}
