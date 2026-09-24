@@ -1325,3 +1325,28 @@ footer { padding-top:42px; padding-bottom:42px; }
   transform: scale(1.8);
 }
 .moli-cursor.visible { opacity: .96; }
+
+
+/* Por qué elegirnos: 4 tarjetas juntas */
+#ventajas .advantages-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  align-items: stretch;
+}
+#ventajas .advantage-card {
+  min-width: 0;
+  min-height: 285px;
+  padding: 26px 20px !important;
+}
+@media (max-width: 1050px) {
+  #ventajas .advantages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 620px) {
+  #ventajas .advantages-grid {
+    grid-template-columns: 1fr !important;
+  }
+  #ventajas .advantage-card { min-height: auto; }
+}
