@@ -1350,3 +1350,33 @@ footer { padding-top:42px; padding-bottom:42px; }
   }
   #ventajas .advantage-card { min-height: auto; }
 }
+
+
+/* Resultados más compactos */
+#resultados {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+#resultados .section-header {
+  margin-bottom: 26px;
+}
+#resultados .before-after-grid {
+  gap: 18px;
+}
+#resultados .comparison-card {
+  padding: 18px !important;
+  gap: 18px;
+}
+#resultados .comparison-card .before,
+#resultados .comparison-card .after {
+  padding: 22px 24px;
+}
+#resultados .comparison-card h3 {
+  margin-bottom: 12px;
+}
+#resultados .comparison-card ul {
+  margin-top: 10px;
+}
+#resultados .comparison-card li {
+  margin-bottom: 5px;
+}
