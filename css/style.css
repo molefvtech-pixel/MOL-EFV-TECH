@@ -1253,3 +1253,75 @@ footer { padding-top:42px; padding-bottom:42px; }
 @media (hover: none), (pointer: coarse), (max-width: 768px) {
   .moli-cursor { display: none !important; }
 }
+
+
+/* Valores orientativos - diseño compacto definitivo */
+#precios .price-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  width: 100%;
+}
+#precios .price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 285px;
+  padding: 26px 18px 20px !important;
+  text-decoration: none;
+  color: var(--text);
+}
+#precios .price-card > i {
+  flex: 0 0 auto;
+}
+#precios .price-card h3 { text-align:center; }
+#precios .price-card p {
+  text-align: center;
+  margin-bottom: 18px;
+}
+#precios .price-card strong {
+  width: 100%;
+  margin-top: auto;
+  padding: 11px 14px;
+  border: 1px solid rgba(34,211,238,.5);
+  border-radius: 13px;
+  transition: .25s ease;
+}
+#precios .price-card:hover strong {
+  border-color: var(--green);
+  box-shadow: 0 0 18px rgba(34,211,238,.18);
+}
+#precios .price-card strong i { margin-left:8px; font-size:.85em; }
+@media (max-width: 1050px) {
+  #precios .price-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 620px) {
+  #precios .price-grid { grid-template-columns: 1fr !important; }
+  #precios .price-card { min-height: auto; }
+}
+
+/* Cabeza de Moli flotante junto al cursor */
+.moli-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 72px;
+  height: 64px;
+  overflow: hidden;
+  border-radius: 50% 50% 46% 46%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  transform: translate3d(-100px,-100px,0);
+  transition: opacity .18s ease;
+  filter: drop-shadow(0 4px 10px rgba(34,211,238,.45));
+}
+.moli-cursor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 15%;
+  transform: scale(1.8);
+}
+.moli-cursor.visible { opacity: .96; }
