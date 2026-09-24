@@ -1380,3 +1380,31 @@ footer { padding-top:42px; padding-bottom:42px; }
 #resultados .comparison-card li {
   margin-bottom: 5px;
 }
+
+
+/* Sobre MOL EFV TECH más compacto */
+#historia {
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+#historia .section-header {
+  margin-bottom: 24px;
+}
+#historia .about-content {
+  gap: 24px;
+  align-items: center;
+}
+#historia .about-text h3 {
+  margin-bottom: 16px;
+}
+#historia .about-text p {
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+#historia .about-card {
+  padding: 24px !important;
+  min-height: auto;
+}
+#historia .about-card > i {
+  margin-bottom: 14px;
+}
