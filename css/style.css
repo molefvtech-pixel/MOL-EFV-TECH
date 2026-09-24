@@ -1140,3 +1140,45 @@ footer { padding-top:42px; padding-bottom:42px; }
     background-position: center top;
   }
 }
+
+/* Servicios resumidos y contacto compacto */
+.service-grid-summary {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.service-grid-summary .service-card {
+  min-height: 270px;
+  padding: 24px;
+}
+#contacto {
+  padding-top: 52px;
+  padding-bottom: 52px;
+}
+#contacto .section-header {
+  margin-bottom: 24px;
+}
+#contacto .contact-wrapper,
+#contacto .contact-grid {
+  gap: 22px;
+}
+#contacto .contact-form,
+#contacto .contact-info {
+  padding: 24px;
+}
+#contacto input,
+#contacto textarea,
+#contacto select {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+#contacto textarea {
+  min-height: 110px;
+}
+@media (max-width: 1050px) {
+  .service-grid-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .service-grid-summary { grid-template-columns: 1fr; }
+  .service-grid-summary .service-card { min-height: auto; }
+  #contacto { padding-top: 44px; padding-bottom: 44px; }
+}
