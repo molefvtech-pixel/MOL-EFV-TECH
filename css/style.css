@@ -1081,3 +1081,42 @@ footer {
     }
 
 }
+
+/* Ajuste compacto 2026 */
+section { padding-top: 72px; padding-bottom: 72px; }
+.section-header { margin-bottom: 36px; }
+.hero { min-height: 88vh; padding-top: 120px; }
+.hero-layout {
+  position: relative; z-index: 2; width: 100%;
+  display: grid; grid-template-columns: minmax(0,1.1fr) minmax(300px,.9fr);
+  gap: 48px; align-items: center;
+}
+.hero-content { max-width: 680px; }
+.hero h1 { font-size: clamp(2.8rem, 6vw, 5.4rem); }
+.hero p { line-height: 1.7; }
+.hero-buttons { margin-top: 26px; }
+.hero-badges { margin-top: 25px; }
+.hero-promo {
+  justify-self: end; width: min(100%, 480px); padding: 14px;
+  border: 1px solid rgba(34,211,238,.38); border-radius: 30px;
+  background: rgba(2,6,23,.58); box-shadow: 0 24px 70px rgba(0,0,0,.42);
+  backdrop-filter: blur(12px);
+}
+.hero-promo img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:22px; }
+.hero-promo span {
+  display:block; padding:14px 10px 4px; text-align:center; color:#cbd5e1;
+  font-size:.9rem; line-height:1.55;
+}
+.service-grid { grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+.service-card, .advantage-card, .price-card { padding:25px; }
+.icon, .advantage-card > i, .price-card > i { width:56px; height:56px; margin-bottom:17px; }
+.systems-section { padding-top:58px; padding-bottom:58px; }
+.systems-image { max-width:760px; }
+.systems-image img { max-height:390px; }
+.about-content { gap:30px; }
+.mascot-stage { max-width:650px; }
+.floating-mascot { width:min(100%,440px); max-height:58vh; }
+.advantages-grid, .price-grid { gap:18px; }
+.price-card { padding-top:22px; padding-bottom:22px; }
+.results-section .comparison-card { padding:22px; }
+footer { padding-top:42px; padding-bottom:42px; }
