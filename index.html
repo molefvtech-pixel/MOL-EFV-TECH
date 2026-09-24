@@ -499,5 +499,27 @@
   </button>
 
   <script src="js/script.js"></script>
+
+  <img class="moli-cursor" id="moliCursor" src="img/moli.png" alt="" aria-hidden="true">
+  <script>
+    (() => {
+      const moli = document.getElementById('moliCursor');
+      if (!moli || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+      let x = -100, y = -100, tx = -100, ty = -100;
+      document.addEventListener('mousemove', (e) => {
+        tx = e.clientX + 18;
+        ty = e.clientY + 18;
+        moli.classList.add('visible');
+      }, { passive: true });
+      document.addEventListener('mouseleave', () => moli.classList.remove('visible'));
+      const animate = () => {
+        x += (tx - x) * .16;
+        y += (ty - y) * .16;
+        moli.style.transform = `translate3d(${x}px,${y}px,0)`;
+        requestAnimationFrame(animate);
+      };
+      animate();
+    })();
+  </script>
 </body>
 </html>
