@@ -1484,3 +1484,63 @@ footer { padding-top:42px; padding-bottom:42px; }
     margin-top: 18px !important;
   }
 }
+
+
+/* Contacto compacto + teléfonos juntos */
+#contacto {
+  padding-top: 42px !important;
+  padding-bottom: 42px !important;
+}
+#contacto .contact-layout {
+  gap: 18px !important;
+  align-items: start;
+}
+#contacto .contact-box {
+  gap: 12px;
+}
+#contacto .contact-phones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+#contacto .contact-phones .contact-btn {
+  min-width: 0;
+}
+#contacto .contact-btn {
+  padding: 16px 18px;
+}
+#contacto .contact-form {
+  padding: 16px 18px !important;
+}
+#contacto .contact-form > label {
+  margin-bottom: 9px !important;
+  gap: 4px;
+}
+#contacto .contact-form input {
+  min-height: 38px !important;
+  height: 38px !important;
+  padding: 6px 12px !important;
+}
+#contacto .contact-form textarea {
+  min-height: 68px !important;
+  height: 68px !important;
+  padding: 8px 12px !important;
+}
+#contacto .contact-form .btn {
+  min-height: 40px !important;
+  padding: 8px 14px !important;
+}
+#contacto .contact-form > small {
+  margin-top: 7px;
+}
+@media (max-width: 640px) {
+  #contacto .contact-phones {
+    grid-template-columns: 1fr;
+  }
+  #contacto .contact-btn {
+    padding: 13px 15px;
+  }
+  #contacto .contact-form {
+    padding: 14px !important;
+  }
+}
