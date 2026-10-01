@@ -1459,3 +1459,28 @@ footer { padding-top:42px; padding-bottom:42px; }
   transform: scale(2.35) translateY(7%) !important;
   transform-origin: 50% 10%;
 }
+
+
+/* Portada más baja en escritorio */
+@media (min-width: 901px) {
+  .hero {
+    min-height: 650px !important;
+    height: 650px;
+    max-height: 650px !important;
+    padding-top: 105px !important;
+    padding-bottom: 35px !important;
+    overflow: hidden;
+  }
+  .hero h1 {
+    font-size: clamp(2.7rem, 5vw, 4.6rem) !important;
+  }
+  .hero p {
+    line-height: 1.55;
+  }
+  .hero-buttons {
+    margin-top: 18px !important;
+  }
+  .hero-badges {
+    margin-top: 18px !important;
+  }
+}
