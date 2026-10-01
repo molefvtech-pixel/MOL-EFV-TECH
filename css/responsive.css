@@ -236,3 +236,97 @@
   .hero-promo span { font-size:.82rem; }
   .service-card, .advantage-card, .price-card { padding:22px; }
 }
+
+
+/* Optimización móvil MOL EFV TECH */
+@media (max-width: 640px) {
+  html, body { overflow-x: hidden; }
+  section { padding: 38px 16px !important; }
+  .section-header { margin-bottom: 20px !important; }
+  .section-header h2 { font-size: clamp(1.65rem, 9vw, 2.35rem); }
+  .section-header p { font-size: .9rem; line-height: 1.45; }
+
+  .navbar { min-height: 64px; }
+  .logo img { width: 42px; height: 42px; }
+  .logo span { font-size: .72rem; }
+
+  .hero {
+    min-height: auto !important;
+    padding: 92px 16px 42px !important;
+    background-size: cover !important;
+  }
+  .hero-layout { gap: 20px !important; }
+  .hero h1 { font-size: clamp(2.2rem, 13vw, 3.3rem); }
+  .hero p { font-size: .92rem; line-height: 1.5; }
+  .hero-buttons { gap: 10px; }
+  .hero-badges { gap: 8px; }
+  .hero-promo { max-width: 320px; }
+
+  #historia { padding: 38px 16px !important; }
+  #historia .about-content { gap: 16px; }
+  #historia .about-text h3 { font-size: 1.2rem; }
+  #historia .about-text p { font-size: .9rem; line-height: 1.5; margin-bottom: 10px; }
+  #historia .about-card { padding: 18px !important; }
+
+  #resultados { padding: 38px 16px !important; }
+  #resultados .before-after-grid { gap: 12px !important; }
+  #resultados .comparison-card {
+    grid-template-columns: 1fr !important;
+    gap: 5px !important;
+    padding: 10px !important;
+    border-radius: 18px;
+  }
+  #resultados .comparison-card .before,
+  #resultados .comparison-card .after {
+    padding: 13px 14px !important;
+    border-radius: 14px;
+  }
+  #resultados .comparison-card > i {
+    font-size: 1.2rem;
+    margin: -2px 0;
+  }
+  #resultados .comparison-card h3 {
+    font-size: 1rem;
+    margin-bottom: 5px !important;
+  }
+  #resultados .comparison-card .before > span,
+  #resultados .comparison-card .after > span {
+    font-size: .76rem;
+  }
+  #resultados .comparison-card ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 14px;
+    padding-left: 18px;
+    margin-top: 5px !important;
+  }
+  #resultados .comparison-card li {
+    font-size: .82rem;
+    margin: 0 !important;
+    line-height: 1.35;
+  }
+
+  #ventajas .advantages-grid,
+  #precios .price-grid,
+  .service-grid-summary {
+    gap: 10px !important;
+  }
+  #ventajas .advantage-card,
+  #precios .price-card,
+  .service-grid-summary .service-card {
+    min-height: auto !important;
+    padding: 17px !important;
+  }
+
+  .floating-mascot { max-height: 48vh; }
+  .moli-cursor { display: none !important; }
+
+  .whatsapp-float, .btn-top, .music-toggle {
+    width: 46px;
+    height: 46px;
+    right: 12px;
+  }
+  .whatsapp-float { bottom: 12px; }
+  .btn-top { bottom: 66px; }
+  .music-toggle { bottom: 120px; }
+}
