@@ -16,3 +16,37 @@
 .work-real-gallery figcaption{padding:15px 16px;background:#072344;color:#dcf9ff;min-height:61px;font-size:.89rem;line-height:1.35}
 @media(max-width:790px){.work-real-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.work-real-gallery img{height:200px}}
 @media(max-width:510px){.work-real-gallery{grid-template-columns:1fr}.work-real-gallery img{height:250px}}
+
+/* Pie de página centrado: contenido agrupado en todas las pantallas */
+.footer .footer-inner{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  padding:42px 0 142px;
+  text-align:center;
+}
+.footer .footer-inner>div{
+  width:100%;
+  max-width:640px;
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+.footer .footer-note{
+  text-align:center;
+  margin-top:6px;
+}
+.footer .footer-note span{
+  display:block;
+  margin-top:4px;
+}
+@media(max-width:760px){
+  .footer .footer-inner{
+    align-items:center;
+    text-align:center;
+    gap:10px;
+    padding:35px 0 126px;
+  }
+  .footer .footer-note{text-align:center}
+}
