@@ -1,0 +1,34 @@
+name: Importar fotos reales del taller MOL EFV TECH
+on:
+  push:
+    paths:
+      - .github/workflows/importar-fotos-mol.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar fotos autorizadas y guardar en GitHub
+        run: |
+          python3 - <<'PY'
+          import urllib.request, os
+          items=[{"file":"hardware.jpg","url":"https://media.canva.com/v2/image-resize/format:JPG/height:150/quality:75/uri:ifs%3A%2F%2FM%2Fc33db392-d149-410e-8437-19849b984d55/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAALJjdRlrJOi3fmbOHJJg6QBbo1U_3ah-DDt-h5W12dsa&exp=1793058486&osig=AAAAAAAAAAAAAAAAAAAAAMQkvdF_F74FOt1QGEguY8hLwcNUxp3LWWhgpVAM13wD&signer=media-rpc&token=AAIAAU0AJGMzM2RiMzkyLWQxNDktNDEwZS04NDM3LTE5ODQ5Yjk4NGQ1NQAAAAABoXqdNvBo9SyXaajRcYJk5ujRMWzXwVOazKdKZgZ8EI2qj0QoeA&x-canva-quality=thumbnail"},{"file":"memorias-ram.jpg","url":"https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2Ff66027c8-8cc0-4ec1-a373-09246486ad10/watermark:F/width:150?csig=AAAAAAAAAAAAAAAAAAAAANdqzR7AwW-HWT-5fp1qSfXzN6gftFodPHNzRhjvi3n8&exp=1793056483&osig=AAAAAAAAAAAAAAAAAAAAAI0VTypqLKil3xh_7vuPyArjqc6lXsZFZcGZCqOLS0sk&signer=media-rpc&token=AAIAAU0AJGY2NjAyN2M4LThjYzAtNGVjMS1hMzczLTA5MjQ2NDg2YWQxMAAAAAABoXp-priT_nYrnlGlTU4V6ibNAR_ES8JDsJzuYavE9qjD9vvFFA&x-canva-quality=thumbnail"},{"file":"reparacion.jpg","url":"https://media.canva.com/v2/image-resize/format:JPG/height:150/quality:75/uri:ifs%3A%2F%2FM%2Fe3cefcde-130b-4bc0-ba73-2d19266697d5/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAABFmY4BpfpR4RKwW7m7QBpo0nBgCp18KjV6oOSmAOClm&exp=1793057890&osig=AAAAAAAAAAAAAAAAAAAAALXk_vd4ZZi94bIzyz3jQF1-PSdgBUXgPaiNKScJPPyk&signer=media-rpc&token=AAIAAU0AJGUzY2VmY2RlLTEzMGItNGJjMC1iYTczLTJkMTkyNjY2OTdkNQAAAAABoXqUHtAThZQTLujfCYNePrFD4_ET7Ox6G3QxLlURRYOvOGo9Tw&x-canva-quality=thumbnail"},{"file":"componentes.jpg","url":"https://media.canva.com/v2/image-resize/format:JPG/height:150/quality:75/uri:ifs%3A%2F%2FM%2F09337f83-447a-44a1-bc4a-4659c7588193/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAADBvNMNVW9g91lMduHZsz_o9RHm6Abv_d_BpBCaSTbfF&exp=1793055564&osig=AAAAAAAAAAAAAAAAAAAAAF91trfPDQzEr5ri1KqINPCcl1hWeRf_DFNvJpVY4Xa7&signer=media-rpc&token=AAIAAU0AJDA5MzM3ZjgzLTQ0N2EtNDRhMS1iYzRhLTQ2NTljNzU4ODE5MwAAAAABoXpwoOBTQbvaW7RjzcvJk0XJCpqTElEE-zlzhVZ_i6a7B4vWzg&x-canva-quality=thumbnail"},{"file":"placa-madre.jpg","url":"https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2Fc81e0b89-05b9-4cfe-a9fe-2da9c23dbdbc/watermark:F/width:150?csig=AAAAAAAAAAAAAAAAAAAAABGoBxCa0bKbe6CeCQGbu-liwDC2qRhdyYou-VYzvuZe&exp=1793057692&osig=AAAAAAAAAAAAAAAAAAAAACasPToOvNf9sbwYDyPs0T_V3iMUi91BkAzkru8SGUW1&signer=media-rpc&token=AAIAAU0AJGM4MWUwYjg5LTA1YjktNGNmZS1hOWZlLTJkYTljMjNkYmRiYwAAAAABoXqRGWDZzCqRkmvoNzoUK_YuKGjef5GvzdSERLQMMdC-DjqqbA&x-canva-quality=thumbnail"},{"file":"limpieza.jpg","url":"https://media.canva.com/v2/image-resize/format:JPG/height:150/quality:75/uri:ifs%3A%2F%2FM%2F84346c74-ba53-43d9-bd09-a130d2145aae/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAOwAwCOuua9Vcm4_vr0NJfaK-m_3r-D_elhYya5lOd76&exp=1793055840&osig=AAAAAAAAAAAAAAAAAAAAAP64nnSDXt92MRrvjIiyEZ_BUDA98AwbIBNsdYiLe29-&signer=media-rpc&token=AAIAAU0AJDg0MzQ2Yzc0LWJhNTMtNDNkOS1iZDA5LWExMzBkMjE0NWFhZQAAAAABoXp01wB5bUsNLV0UNKVJoseQfnz9hv1PSEmQghe5t5PTdYcG0Q&x-canva-quality=thumbnail"}]
+          os.makedirs('img/trabajos',exist_ok=True)
+          for item in items:
+           name='img/trabajos/'+item['file']
+           req=urllib.request.Request(item['url'],headers={'User-Agent':'Mozilla/5.0'})
+           with urllib.request.urlopen(req,timeout=40) as request: data=request.read()
+           if not(data[:3]==b'\xff\xd8\xff' and len(data)>1000): raise RuntimeError('Imagen JPEG inválida: '+name)
+           with open(name,'wb') as out:out.write(data)
+           print(name,len(data))
+          
+          PY
+      - name: Guardar fotografías en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add img/trabajos/
+          git diff --cached --quiet || (git commit -m "Agregar seis fotografías reales del taller" && git push)
